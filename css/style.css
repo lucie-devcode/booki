@@ -21,8 +21,33 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
-    padding: 0 50px;
+    padding: 0 50px; /*faut il garder sur toute la page?*/
     box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.navbar img {
+    width: 120px; /* adapte selon ce que Figma indique */
+    height: auto; /* conserve les proportions */
+  
+}
+
+.nav-links {
+    display: flex;
+    gap: 68px;
+    padding: 10px;
+}
+
+.nav-links a:hover {
+  color: var(--main-color);
+  border-top: 2px solid var(--main-color);
 }
 
 a {
