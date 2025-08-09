@@ -7,6 +7,7 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+    
 }
 
 .fa-solid {
@@ -16,6 +17,27 @@
 body {
     display: flex;
     justify-content: center;
+}
+
+header {
+    margin-bottom: 60px;
+}
+
+h1 {
+  margin: 0 0 5px; /* 5px sous le titre */
+}
+
+p {
+  margin: 0 0 25px; /* 25px sous le paragraphe */
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 22px;
 }
 
 .main-container {
@@ -28,15 +50,14 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     margin: 0 auto;
     width: 100%;
 }
 
-.navbar img {
-    width: 120px; /* adapte selon ce que Figma indique */
+.logo img {
+    width: 60px; /* adapte selon ce que Figma indique */
     height: auto; /* conserve les proportions */
-  
 }
 
 .nav-links {
@@ -45,14 +66,19 @@ body {
     padding: 10px;
 }
 
+.nav-links a {
+    display: inline-block;
+    text-decoration: none;
+    padding-top: 16px;  
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    position: relative;
+}
+
 .nav-links a:hover {
   color: var(--main-color);
   border-top: 2px solid var(--main-color);
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
 }
 
 .section-title {
@@ -83,6 +109,68 @@ a {
     color: var(--main-bg-color)
 }
 
+/****** Filters ***********/
+
+.filters{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;                 /* espace entre le titre et les pills */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.filters h3{
+  margin: 0 8px 0 0;         /* collé au premier pill */
+  font-size: 17px;
+}
+
+/* Pill */
+.btn-filter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;                 /* espace icône/texte */
+  padding: 15px 20px;
+  border: 2px solid var(--main-bg-color);
+  border-radius: 30px;
+  background: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 18px;
+  min-width: 150px;
+}
+
+/* Pastille icône */
+.btn-filter .icon{
+  display: grid;
+  place-items: center;
+  width: auto;
+  height: auto;
+  border-radius: 50%;
+ 
+}
+
+.btn-filter i{
+  color: var(--main-color);
+  font-size: 18px;
+}
+
+.btn-filter .label{ line-height: 1; }
+
+/* Hover / focus */
+.btn-filter:hover{
+  background: var(--filter-bg-color);
+  border-color: var(--filter-bg-color);   
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+}
+
+.btn-filter:focus-visible{
+  outline: 2px solid var(--main-color);
+  outline-offset: 2px;
+}
+
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
@@ -99,36 +187,39 @@ a {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    display: flex;  
+    flex-direction: column;
 }
 
 .hebergements-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 0 20px 0; 
 }
 
 .hebergements-cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-     gap: 30px
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
 }
 
 .hebergements-cards .card {
     display: flex;
-    margin-top: 33px;
+    flex-direction: column;
+    margin: 0;
     
 }
 
 .hebergements-cards img {
-    width: 33%;
+    width: 100%;
     height: 136px;
     border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .hebergements-cards .card-content {
-    width: 67%;
+    width: 100%;
     padding-left: 15px;
     display: flex;
     flex-direction: column;
@@ -147,6 +238,10 @@ a {
 
 .hebergements-cards .card-rating {
     margin-bottom: 5px;
+}
+
+.afficher-plus {
+    margin-top: 20px;             /* = gap de la grille pour un alignement propre */
 }
 
 /****** Populaires ***********/
