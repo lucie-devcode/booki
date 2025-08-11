@@ -20,10 +20,13 @@
 
     <div class="main-container">
         <header>
-            <nav class="navbar">
+            <nav class="navbar" aria-label="Navigation principale">
+                <!-- Logo -->
                  <div class="logo">
-                <img src="images/logo/Booki.png" alt="logo de booki">
+                <img src="images/logo/Booki.png" alt="logo de Booki">
                 </div>
+
+                <!-- Liens de navigation -->
                 <div class="nav-links">
                     <a href="#">Hébergements</a>
                     <a href="#">Activités</a>
@@ -36,14 +39,18 @@
     <section class="hero">
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <p class="subtitle">En plein centre-ville ou en pleine nature</p>
-        <form action="">
-            <label>
+        
+        <div class="search-bar">
+            <div class="search-icon" aria-hidden="true">
                 <i class="fa-solid fa-location-dot"></i>
-                <input type="text" placeholder="Marseille, France">
-            </label>
-            <button type="submit">Rechercher</button>
-        </form>
-    </section>
+            </div>
+
+            <div class="search-location">
+                Marseille, France
+            </div>
+
+            <a href="#" class="search-button">Rechercher</a>
+        </div>
 
     <!-- FILTERS -->
 
