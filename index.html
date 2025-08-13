@@ -20,7 +20,7 @@
 
     <div class="main-container">
         <header>
-            <nav class="navbar" aria-label="Navigation principale">
+            <nav class="navbar">
                 <!-- Logo -->
                  <div class="logo">
                 <img src="images/logo/Booki.png" alt="logo de Booki">
@@ -37,18 +37,16 @@
 
     <!-- SEARCH BAR -->
 
-    <section class="hero">
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <p class="subtitle">En plein centre-ville ou en pleine nature</p>
         
-        <div class="search-bar">
-            <div class="search-icon" aria-hidden="true">
-                <i class="fa-solid fa-location-dot"></i>
+        <div class="research-box">
+            <div class="icon-location">
+                <i class="fas fa-map-marker-alt"></i>
             </div>
-            <input type="text" placeholder="Marseille, France" class="search-location">
-            <a href="#" class="search-button">Rechercher</a>
+            <input type="text" placeholder="Marseille, France" class="research-bar">
+            <button class="button-research" id="button-research">Rechercher</button>
         </div>
-    </section>
 
     <!-- FILTERS -->
 
@@ -74,6 +72,11 @@
             <span class="icon"><i class="fa-solid fa-fire-flame-curved"></i></span>
             <span class="label">Nos pépites</span>
         </button>
+    </div>
+
+    <div class="info">
+            <i class="fas fa-info"></i>
+            <p>Plus de 500 logements sont disponibles dans cette ville</p>
     </div>
 
         
