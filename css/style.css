@@ -119,8 +119,9 @@ header .logo img {
   border-radius: 14px 0 0 14px;
 }
 
-.fa-map-marker-alt {
+.fa-location-dot {
   font-size: 18px;
+  color: black;
 }
 
 /* input */
@@ -219,7 +220,7 @@ header .logo img {
     outline-offset: 2px;
 }
 
-.info .fas {
+.info .fa-solid {
   color: #0065fc;
   font-size: 16px;
   padding: 7px 11px 7px 11px;
