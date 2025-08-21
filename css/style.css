@@ -98,7 +98,7 @@ header .logo img {
 
           
 .subtitle {
-    margin: 10px 0 25px;    /* 10px au-dessus, 25px en dessous */
+    margin: 10px 0 30px;    
 }      
 
 .research-box {
@@ -158,6 +158,12 @@ header .logo img {
 }
 
 /*********** Filters ***********/
+
+.filters h2 {
+    font-size: 1.2rem;  /* comme un h3 */
+  font-weight: 600;
+  margin: 0;
+}
 
 .filters{
     display: flex;
@@ -470,6 +476,7 @@ header .logo img {
 
 /*********** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
+
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
         flex-direction: column;
@@ -501,6 +508,23 @@ header .logo img {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .filters {
+      flex-wrap: wrap;           /* permet aux boutons de passer à la ligne si ça déborde */
+    align-items: flex-start;
+  }
+
+.filters h2 {
+    flex-basis: 100%;          /* prend toute la largeur → pousse les boutons en dessous */
+}
+
+  .activites-cards img {
+    width: 100%;      /* s’adapte à la largeur du container */
+    height: 150px; 
+    object-fit: cover; 
+  }
+
+
 }
 
 /* Small devices (phones, less than 768px) */
