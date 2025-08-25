@@ -59,7 +59,7 @@ h1 {
 /* Logo */
 header .logo img {
     display: block;     /* enlève le petit gap inline */
-    height: 20px;       /* taille maquette */
+    height: 25px;       /* taille maquette */
     width: auto;
     margin-top: 30px;
     
@@ -156,6 +156,7 @@ header .logo img {
   background-color: #003c96;
   transition: ease 0.3s;
 }
+
 
 /*********** Filters ***********/
 
@@ -424,6 +425,9 @@ header .logo img {
 
 .activites-cards .card-content {
     padding: 15px;
+    height: 35px;
+    display: flex;
+    align-items: center;
 }
 
 .activites-cards .card-title {
@@ -512,11 +516,11 @@ header .logo img {
     .filters {
       flex-wrap: wrap;           /* permet aux boutons de passer à la ligne si ça déborde */
     align-items: flex-start;
-  }
+    }
 
-.filters h2 {
+    .filters h2 {
     flex-basis: 100%;          /* prend toute la largeur → pousse les boutons en dessous */
-}
+    }
 
   .activites-cards img {
     width: 100%;      /* s’adapte à la largeur du container */
@@ -529,5 +533,41 @@ header .logo img {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+
+ /* Header */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    align-content: space-around;
+    
+  }
+
+   .nav-links {
+    width: 100%;
+    justify-content: space-around; /* navigation centrée */
+    gap: 0;
+    
+  }
+
+  .nav-links a {
+    flex: 1;
+    text-align: center;
+    padding-bottom: 16px; /* un peu d’espace */
+    border-top: none;                /* désactive le top border */
+    border-bottom: 2px solid #F2F2F2; /* prépare le bottom border */
+    margin-top: 20px;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    border-bottom-color: var(--main-color); /* la barre bleue apparaît en bas */
+  }
+   .hebergements-and-populaires {
+    flex-direction: column-reverse; /* inverse l'ordre */
+  }
+
 }
+    
+    
+ 
