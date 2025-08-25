@@ -105,7 +105,7 @@ header .logo img {
   display: inline-flex;
   flex-direction: row;
   margin-top: 15px;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 
 /* icone */
@@ -157,6 +157,13 @@ header .logo img {
   transition: ease 0.3s;
 }
 
+.fa-magnifying-glass {
+    color: white;
+}
+
+.mobile-loupe {
+  display: none; /* cache la loupe sur desktop */
+}
 
 /*********** Filters ***********/
 
@@ -567,6 +574,12 @@ header .logo img {
     flex-direction: column-reverse; /* inverse l'ordre */
   }
 
+   #button-research {
+    display: none;  /* on cache le bouton texte */
+  }
+    .mobile-loupe {
+    display: inline-flex;
+    }
 }
     
     
