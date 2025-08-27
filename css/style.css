@@ -538,12 +538,14 @@ header .logo img {
 }
 
 /* Small devices (phones, less than 768px) */
+
 @media (max-width: 767.98px) {
 
     .main-container {
         margin: 0;
         padding: 0;
     }
+    
  /* Header */
   .navbar {
     flex-direction: column;
@@ -555,23 +557,34 @@ header .logo img {
 
    .nav-links {
     width: 100%;
-    justify-content: space-around; /* navigation centrée */
+    display: flex;
+    justify-content: space-around;
     gap: 0;
-    
+    flex-wrap: wrap;
   }
 
-  .nav-links a {
-    flex: 1;
+ .nav-links a {
+    flex: 1 1 45%; /* deux liens par ligne */
     text-align: center;
-    padding-bottom: 16px; /* un peu d’espace */
-    border-top: none;                /* désactive le top border */
-    border-bottom: 2px solid #F2F2F2; /* prépare le bottom border */
+    padding-bottom: 16px;
+    border-top: none;
+    border-bottom: 2px solid #F2F2F2;
     margin-top: 20px;
   }
 
   .nav-links a:hover,
   .nav-links a.active {
     border-bottom-color: var(--main-color); /* la barre bleue apparaît en bas */
+  }
+
+  .mobile-padding  {
+     padding: 0 25px;
+  }
+
+  .research-box {
+    width: 100%;
+  padding: 0 10px; /* petite marge interne gauche/droite */
+  box-sizing: border-box; /* pour inclure le padding dans la largeur */
   }
 
      #button-research {
@@ -582,7 +595,21 @@ header .logo img {
     display: inline-flex;
     }
 
+    /* Filtres */
+    .filters {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .btn-filter {
+    flex: 1 1 45%; /* deux filtres par ligne */
+  box-sizing: border-box;
+    }
+
+
+    /* Sections hébergements et populaires */
    .hebergements-and-populaires {
+    display: flex;
     flex-direction: column-reverse; /* inverse l'ordre */
   }
 
@@ -590,7 +617,13 @@ header .logo img {
     border-radius: 0;
   }
 
-  .populaires-cards {
+  .hebergements-and-populaires .hebergements {
+    background-color: white;
+    }
+
+  .populaires-cards,
+  .hebergements-cards,
+  .activites-cards {
      display: flex;
   flex-direction: column;
   }
@@ -599,21 +632,11 @@ header .logo img {
         width: 100%;
     }
 
-
-.hebergements-and-populaires .hebergements {
-background-color: white;
-}
-
-.hebergements-cards {
+.footer-columns {
     display: flex;
-  flex-direction: column;
+    flex-direction: column; /* met les sections en colonne */
+    gap: 20px; /* espace entre chaque bloc */
 }
-
-.activites-cards {
-   display: flex;
-  flex-direction: column; 
-}
-
 
 }
     
